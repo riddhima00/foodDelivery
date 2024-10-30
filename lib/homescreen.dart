@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:fooddelivery/myorders.dart';
 import 'package:fooddelivery/restaurantview.dart';
 import 'package:fooddelivery/cartscreen.dart';
 
@@ -96,11 +97,11 @@ class _HomeScreenState extends State<HomeScreen> {
               },
             ),
             ListTile(
-              title: Text('Personal Info'),
-              leading: Icon(Icons.person_2_outlined, color: Colors.orange,),
+              title: Text('My Orders'),
+              leading: Icon(Icons.shopping_bag_outlined, color: Colors.orange,),
               trailing: Icon(Icons.arrow_right),
               onTap: (){
-                Navigator.pop(context);
+                Navigator.push(context, MaterialPageRoute(builder: (context) => MyOrders()));
 
               },
             ),
